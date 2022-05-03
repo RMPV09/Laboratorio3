@@ -3,3 +3,35 @@
 *@
 @{
 }
+@model List<Laboratorio3.Models.SongModel>;
+
+@{
+    ViewData["Title"] = "Songs";
+}
+
+
+<h1>@ViewBag.MainTitle</h1>
+<div>
+    <body>
+        @foreach (var item in Model)
+        {
+            <p>
+                Song ID: <input type="number" placeholder=@item.Id />  <br />
+            </p>
+            <p>
+                Song Title: <input type="text" placeholder=@item.Name />  <br />
+            </p>
+            <p>
+                Song Genre: <input type="text" placeholder=@item.Genre />  <br />
+
+            </p>
+            <p>
+                Date of release: <input type="text" placeholder=@item.ReleasedDate />  <br />
+            </p>
+            <p>
+                Band: <input type="text" placeholder=@item.Band />  <br />
+            </p>
+        }
+    </body>
+
+</div>
